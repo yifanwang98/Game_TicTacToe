@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxWidth="700.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicTacToeAI">
+   <children>
+      <Label layoutX="357.0" layoutY="545.0" text="CSE 214 Homework5 by" textFill="WHITE">
+         <font>
+            <Font name="Noteworthy Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="559.0" layoutY="521.0" text="Yifan Wang" textFill="WHITE">
+         <font>
+            <Font name="Zapfino" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" onMouseClicked="#quit" text="Quit" textFill="WHITE">
+         <font>
+            <Font name="Phosphate Inline" size="42.0" />
+         </font>
+      </Label>
+      <VBox layoutX="212.0" layoutY="52.0" prefHeight="455.0" prefWidth="451.0" spacing="2.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+               <children>
+                  <Rectangle fx:id="box0" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box0Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                  <Rectangle fx:id="box1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box1Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                  <Rectangle fx:id="box2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box2Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+               <children>
+                  <Rectangle fx:id="box3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box3Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                  <Rectangle fx:id="box4" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box4Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                  <Rectangle fx:id="box5" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box5Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+               <children>
+                  <Rectangle fx:id="box6" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box6Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                  <Rectangle fx:id="box7" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box7Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                  <Rectangle fx:id="box8" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" onMouseClicked="#box8Clicked" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Label fx:id="undoBTN" disable="true" layoutX="580.0" onMouseClicked="#undo" text="undo" textFill="WHITE">
+         <font>
+            <Font name="Phosphate Inline" size="42.0" />
+         </font>
+      </Label>
+      <Button fx:id="start" layoutX="34.0" layoutY="120.0" mnemonicParsing="false" onAction="#startClicked" prefHeight="49.0" prefWidth="111.0" text="Start">
+         <font>
+            <Font name="Noteworthy Bold" size="21.0" />
+         </font>
+      </Button>
+      <Text fx:id="text0" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Text fx:id="text1" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Text fx:id="text2" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Text fx:id="text3" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Text fx:id="text4" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Text fx:id="text5" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Text fx:id="text6" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Text fx:id="text7" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Text fx:id="text8" fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font name="Phosphate Inline" size="120.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="9.0" layoutY="436.0" stroke="BLACK" strokeType="INSIDE" width="186.0" />
+      <VBox layoutX="22.0" layoutY="352.0" prefHeight="175.0" prefWidth="186.0" spacing="10.0">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Winning probability:" wrappingWidth="181.21875">
+               <font>
+                  <Font name="Didot Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="winProbText" fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0" textAlignment="CENTER" wrappingWidth="181.21875">
+               <font>
+                  <Font name="Didot Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Draw probability:" wrappingWidth="181.21875">
+               <font>
+                  <Font name="Didot Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="drawProbText" fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0" textAlignment="CENTER" wrappingWidth="181.21875">
+               <font>
+                  <Font name="Didot Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss probability:" wrappingWidth="181.21875">
+               <font>
+                  <Font name="Didot Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="loseProbText" fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0" textAlignment="CENTER" wrappingWidth="181.21875">
+               <font>
+                  <Font name="Didot Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <Label layoutX="13.0" layoutY="52.0" onMouseClicked="#showStartPage" text="REstart" textFill="WHITE">
+         <font>
+            <Font name="Phosphate Inline" size="42.0" />
+         </font>
+      </Label>
+      <Text fill="#b0ffcd" fontSmoothingType="LCD" layoutX="24.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRAW" visible="false" fx:id="xoDraw">
+         <font>
+            <Font name="Copperplate" size="53.0" />
+         </font>
+      </Text>
+      <Text fill="#ffe500" fontSmoothingType="LCD" layoutX="21.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X WINS" visible="false" fx:id="xWins">
+         <font>
+            <Font name="Copperplate" size="51.0" />
+         </font>
+      </Text>
+      <Text fx:id="oWins" fill="#ffe500" fontSmoothingType="LCD" layoutX="24.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O WINS" visible="false">
+         <font>
+            <Font name="Copperplate" size="51.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
